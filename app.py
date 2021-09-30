@@ -23,7 +23,7 @@ def number(quantity):
         result[i]['uuid'] = str(uuid4())
         result[i]['time'] = f"{int((time.monotonic() - start_time)*1000)}ms"
         result[i]['date'] = time.asctime(time.localtime())
-    return render_template('requests.html', result=result)
+    return render_template('requests.html', result=result, request_time=f"{int((time.monotonic() - start_time)*1000)}ms")
 
 
 hello_user()
