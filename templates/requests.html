@@ -5,7 +5,7 @@
 </head>
 <body>
     {% for item in result %}
-        <p>{{item['uuid']}}:{{item['time']}}:{{item['date']}}</p>
+        <p>{{item['uuid']}}:{{request_time}}:{{item['date']}}</p>
     {% endfor %}
 </body>
 </html>
