@@ -14,11 +14,14 @@ def hello_user():
 @app.route('/get_data/', defaults={'quantity': 1})
 @app.route('/get_data/<int:quantity>')
 def number(quantity):
+    start_time = time.monotonic()
     result = []
+#    for i in range(1000000):
+#        i += 1
     for i in range(quantity):
         result.append({})
         result[i]['uuid'] = str(uuid4())
-        result[i]['time'] = 'TIME'
+        result[i]['time'] = f"{int((time.monotonic() - start_time)*1000)}ms"
         result[i]['date'] = time.asctime(time.localtime())
     return render_template('requests.html', result=result)
 
