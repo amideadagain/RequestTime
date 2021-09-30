@@ -23,14 +23,4 @@ def number(quantity):
     return render_template('requests.html', result=result)
 
 
-results = []
-for i in range(3):
-    results.append({})
-    results[i]['uuid'] = str(uuid4())
-    results[i]['time'] = 'TIME'
-    results[i]['date'] = time.asctime(time.localtime())
-
-print(results[2])
-
-
 hello_user()
