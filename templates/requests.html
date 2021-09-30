@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+<head>
+    <title>oh no</title>
+</head>
+<body>
+    {% for item in result %}
+        <p>{{item['uuid']}}:{{item['time']}}:{{item['date']}}</p>
+    {% endfor %}
+</body>
+</html>
